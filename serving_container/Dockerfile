@@ -4,7 +4,9 @@ FROM conda/miniconda3:latest
 
 COPY . /app
 
-# install dependencies
+# install dependencies using conda
+
+RUN conda install scikit-learn
 
 RUN pip install -r /app/requirements.txt
 
